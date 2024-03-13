@@ -1,4 +1,4 @@
-MVP TODO List
+## MVP / alpha TODO List
 
 - [x] moonrepo integration
 - [x] typescript
@@ -34,47 +34,48 @@ MVP TODO List
 - [x] added hooking for package.json generation, use it in the library feature to set the correct entry points
 - [x] trim the "dependencies" in published package.json based on the config
 - [x] auto-run 'apply' after package changes
-- [ ] how can we ensure that apply has been run before anything else?
-  - consider modifying package.json to add "preXYZ" to each script, that auto-runs apply
-    - maybe not the best idea, since user might be using pre-scripts already, or using scripts in other scripts (which would cause pre to be apply multiple times)
-- [ ] should we collocate per-package build config in the respective packages, or keep them global?
-  - [ ] if yes, then how do we do it? `.config` folder per package?
-  - [ ] decision: where do we keep local config files? are they centrally managed? do we use config identifiers in folders names to nest configs?
-- [ ] CI & semantic-release or [Auto](https://github.com/intuit/auto) instead
-- [ ] some basic integration tests that use the built packages
-  - what do I actually want to test here? ooh the release process!!!
-- [ ] basic any-config feature:
-  - [ ] symlink all non-js files from .config to the root (e.g. for .env)
-  - [ ] create dummy root .cjs files that require or .js/.mjs files that import their equivalent from .config
-- [ ] look at whether we can have global tasks in moonrepo
-- [ ] during 'apply', auto-transpile .ts config files into .js based on extension? (e.g. webpack.config.source.cts -> webpack.config.gen.cjs)
-- [ ] pre-release
+- [x] pre-release
   - [x] copy/generate LICENSE to each package
   - [x] set correct package.json fields
     - [x] generate correct entry points (like https://github.com/isaacs/tshy)
     - [x] conventional entry point:
       - use `index.ts`, `main.ts` or `${packageName}.ts` if they exist (set camelCase or kebab-case in "conventions" - use it also for file name linting defaults)
-- [ ] "clean"/"default" feature? before build, we need to run apply and clean 'build' dir
-- [ ] add an 'init' command to create a new repo with config (or update existing one) from scratch
-- [ ] add validation for feature dependencies (e.g. "auto" feature depends on "lerna")
-  - maybe not dependencies, but see below - contributed state?
-- [ ] add shared state for features (features can contribute to it and build on top of each other's state)
-  - perhaps features contribute individual settings, like in vscode - providing a required schema - that way we could validate that the dependent state is valid
-- [ ] vitest
-- [ ] CI build and test using moon
-- [ ] similar tool: https://packemon.dev/
 - [x] vscode auto-ignore generated files
 - [x] use https://www.npmjs.com/package/comment-json to keep the comments and only amend input if it exists
-- [ ] bare minimum for repo tool: just copy files from .config to the root and add them to .gitignore
-- [ ] alternatives to consider for dual building from TSC (unfortunately uses babel):
+- [ ] should we collocate per-package build config in the respective packages, or keep them global?
+  - [ ] if yes, then how do we do it? `.config` folder per package?
+  - [ ] make decision: where do we keep local config files? are they centrally managed? do we use config identifiers in folders names to nest configs?
+- [ ] CI & semantic-release or [Auto](https://github.com/intuit/auto)
+- [ ] some basic integration tests that use the built packages
+  - what do I actually want to test here? ooh the release process!!!
+- [ ] "clean"/"default" feature? before build, we need to run apply and clean 'build' dir
+- [ ] add an 'init' command to create a new repo with config (or update existing one) from scratch
+- [ ] vitest feature
+- [ ] CI build and test using moon
+
+- alpha shippable state -
+
+- similar tool: https://packemon.dev/
+- alternatives to consider for dual building from TSC (unfortunately uses babel):
 
   - [duel](https://github.com/knightedcodemonkey/duel)
   - [specifier updating](https://github.com/knightedcodemonkey/specifier)
 
-- shippable state -
+## Later:
 
-Later:
-
+- [ ] add validation for feature dependencies (e.g. "auto" feature depends on "lerna")
+  - maybe not dependencies, but see below - contributed state?
+- [ ] add shared state for features (features can contribute to it and build on top of each other's state)
+  - perhaps features contribute individual settings, like in vscode - providing a required schema - that way we could validate that the dependent state is valid
+- [ ] basic any-config feature:
+  - [ ] bare minimum: just copy files from .config to the root and add them to .gitignore, or
+  - [ ] symlink all non-js files from .config to the root (e.g. for .env)
+  - [ ] create dummy root .cjs files that require or .js/.mjs files that import their equivalent from .config
+- [ ] during 'apply', auto-transpile .ts config files into .js based on extension? (e.g. webpack.config.source.cts -> webpack.config.gen.cjs)
+- [ ] usability: how can we ensure that apply has been run before anything else?
+  - consider modifying package.json to add "preXYZ" to each script, that auto-runs apply
+    - maybe not the best idea, since user might be using pre-scripts already, or using scripts in other scripts (which would cause pre to be apply multiple times)
+    - perhaps a better way is to utilize the script runner dependencies
 - [ ] autodetect when certain tools are configured, but without a condu plugin, and suggest installation
   - yarn - important because of the plugin
   - others: typescript, gitignore, etc.

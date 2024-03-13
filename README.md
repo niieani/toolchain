@@ -2,6 +2,8 @@
 
 NOTE: the codename "condu" is not final and is likely to change.
 
+Configuration as code. Think about condu as terraform for your repository configuration.
+
 The un-template / un-boilerplate / un-scaffold / un-generator.
 Keep ALL of your project configuration up to date, and easily override it, using a single language.
 
@@ -23,7 +25,25 @@ Override only the parts you need to in your given project, and keep the rest up 
 Scaffolding seems great at first, but isn't good enough, because it's not maintainable.
 The ecosystem moves too fast, and there are no configuration management tools in the JavaScript ecosystem.
 
-`condu` fixes [this](https://twitter.com/WarrenInTheBuff/status/1672839156647575552) and [this](https://deno.com/blog/node-config-hell) and [this](https://www.youtube.com/watch?v=wYdnJPYFTIE), and [this](https://x.com/_swanson/status/1715073746073973203?s=61&t=JtRF6B8eIiof-jxZY_xABA).
+`condu` fixes [this](https://twitter.com/WarrenInTheBuff/status/1672839156647575552) long list of files in your root of repo:
+
+- tsconfig.json
+- .eslintrc
+- .prettierrc
+- .babel.config.js (implied child .babelrc)
+- .webpack.config.js
+- jest.config.js
+- .env
+- docker-compose.yml
+- gitlab-ci.yml
+- .npmrc
+- .editorconfig
+
+and [this](https://deno.com/blog/node-config-hell)
+
+and [this](https://www.youtube.com/watch?v=wYdnJPYFTIE),
+
+and [this](https://x.com/_swanson/status/1715073746073973203).
 
 `condu` is here to help out.
 
