@@ -1,6 +1,6 @@
 {
   "name": "condu",
-  "version": "*",
+  "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
     "@pnpm/fetch": "^7.0.7",

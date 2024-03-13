@@ -1,7 +1,7 @@
 {
   "name": "@condu/core",
   "type": "module",
-  "version": "*",
+  "version": "0.0.0",
   "dependencies": {
     "async-memoize-one": "^1.1.7",
     "fp-ts": "^2.16.2",

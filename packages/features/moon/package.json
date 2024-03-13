@@ -1,7 +1,7 @@
 {
   "name": "@condu-feature/moon",
   "type": "module",
-  "version": "*",
+  "version": "0.0.0",
   "dependencies": {
     "@condu/cli": "workspace:*",
     "@condu/core": "workspace:*",

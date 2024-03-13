@@ -1,7 +1,7 @@
 {
   "name": "@condu-feature/gitignore",
   "type": "module",
-  "version": "*",
+  "version": "0.0.0",
   "dependencies": {
     "@condu/core": "workspace:*",
     "remeda": "^1.46.2"
