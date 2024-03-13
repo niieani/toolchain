@@ -1,6 +1,7 @@
 {
   "name": "@condu-feature/typescript",
   "type": "module",
+  "version": "*",
   "dependencies": {
     "@condu/core": "workspace:*"
   }

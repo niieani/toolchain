@@ -1,6 +1,7 @@
 {
   "name": "@condu/schema-types",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },

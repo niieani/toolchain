@@ -2,6 +2,7 @@
   "name": "@condu/yarn-plugin",
   "license": "MIT",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },

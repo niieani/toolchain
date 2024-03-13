@@ -1,6 +1,7 @@
 {
   "name": "@condu/cli",
   "type": "module",
+  "version": "*",
   "dependencies": {
     "@condu/core": "workspace:*",
     "@condu/update-specifiers": "workspace:*",

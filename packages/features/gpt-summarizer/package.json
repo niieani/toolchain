@@ -2,6 +2,7 @@
   "name": "@condu-feature/gpt-summarizer",
   "license": "MIT",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },

@@ -1,6 +1,7 @@
 {
   "name": "@condu/auto-plugin-package-structure",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },

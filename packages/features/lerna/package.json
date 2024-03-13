@@ -1,6 +1,7 @@
 {
   "name": "@condu-feature/lerna",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },

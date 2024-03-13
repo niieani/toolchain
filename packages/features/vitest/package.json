@@ -1,6 +1,7 @@
 {
   "name": "@condu-feature/vitest",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },

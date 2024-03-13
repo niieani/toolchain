@@ -1,6 +1,7 @@
 {
   "name": "@condu-feature/ci-github-actions",
   "type": "module",
+  "version": "*",
   "publishConfig": {
     "access": "public"
   },
